@@ -16,4 +16,6 @@ $data = json_encode($user, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSO
 mysqli_query($connect, "UPDATE `users` SET `data` = '".$data."' WHERE `users`.`id`='$id' ");
 
 
+echo json_encode($user);
+
 ?>

@@ -9,4 +9,6 @@ $data2 = mysqli_fetch_assoc($data2);
 $data2 = json_decode($data2['data'], true);
 
 
+echo json_encode($data2);
+
 ?>

@@ -8,15 +8,16 @@
 // ---------------------------
 
 // $color_bg: #b2bec3;
-$color_bg: #eaeaea;
+// $color_bg: #eaeaea;
+$color_bg: #fafafa;
 $color_bg-2: #f9f9f9;
 $color_text: #2d3436;
 $color_dark: #636e72;
 $color_dark-shadow: #636e7250;
-$color_dark-shadow-2: rgba(0,0,0,0.25);
+$color_dark-shadow-2: rgba(0, 0, 0, 0.25);
 
 // $color_item: #dfe6e9;
-$color_item: #f8f8f8;
+$color_item: #fdfdfd;
 $color_add: #55efc4;
 $color_add-hover: #00b894;
 $color_del: #ff7675;
@@ -36,12 +37,13 @@ $color_red: #f65314;
 
 // ---------------------------
 
-html,body{
+html,
+body {
   font-size: 10px;
   min-width: 100vw;
 }
 
-body{
+body {
   background-color: $color_bg;
   color: $color_text;
   font-family: 'Nunito', sans-serif;
@@ -51,19 +53,19 @@ body{
   min-height: 100vh;
 }
 
-.container{
+.container {
   max-width: 1170px;
   margin: 0 auto;
 }
 
-.row{
+.row {
   position: relative;
   width: 100%;
   display: flex;
   align-items: flex-start;
 }
 
-header{
+header {
   position: fixed;
   width: 100%;
   left: 0;
@@ -72,13 +74,15 @@ header{
   padding: 10px 0 10px 0;
   background-color: $color_bg;
 }
-header .row{
+
+header .row {
   justify-content: space-between;
   align-items: center;
 }
-.header__btn-log{
 
-  display: inline-flex;
+.header__btn-log {
+
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
@@ -94,12 +98,13 @@ header .row{
 
   box-shadow: 0 2px 5px 0 rgba(32, 33, 36, 0.3);
 
-  &:hover{
-      background-color: darken($color_blue, 7);
-      box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
-      // box-shadow: 0 4px 6px $color_dark-shadow, 0 2px 3px $color_dark-shadow;
+  &:hover {
+    background-color: darken($color_blue, 7);
+    box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
+    // box-shadow: 0 4px 6px $color_dark-shadow, 0 2px 3px $color_dark-shadow;
   }
-  &:active{
+
+  &:active {
     background-color: $color_blue;
     transform: translateY(2px);
     box-shadow: 0 3px 1px 0 darken($color_blue, 13);
@@ -107,7 +112,7 @@ header .row{
 }
 
 
-.btn__add-card{
+.btn__add-card {
   margin-left: 1.5rem;
   margin-right: 2rem;
   display: flex;
@@ -125,12 +130,13 @@ header .row{
 
   box-shadow: 0 2px 5px 0 rgba(32, 33, 36, 0.3);
 
-  &:hover{
-      background-color: darken($color_green, 7);
-      box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
-      // box-shadow: 0 4px 6px $color_dark-shadow, 0 2px 3px $color_dark-shadow;
+  &:hover {
+    background-color: darken($color_green, 7);
+    box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
+    // box-shadow: 0 4px 6px $color_dark-shadow, 0 2px 3px $color_dark-shadow;
   }
-  &:active{
+
+  &:active {
     background-color: $color_green;
     transform: translateY(2px);
     box-shadow: 0 3px 1px 0 darken($color_green, 13);
@@ -143,14 +149,14 @@ main {
   padding-right: 0.3rem;
 }
 
-main .row{
+main .row {
   display: flex;
   flex-wrap: wrap;
   margin: -15px -15px;
 }
 
-header .row:after{
-  content:"";
+header .row:after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -158,18 +164,21 @@ header .row:after{
   height: 4px;
   border-radius: 37%;
   background-color: $color_dark;
+
 }
 
-.logo{
+.logo {
   margin: 0 20px;
   margin-right: auto;
-  &__span{
+
+  &__span {
     font-family: 'Chewy', cursive;
     font-size: 3.5rem;
     color: $color_text;
     user-select: none;
   }
 }
+
 .block {
   position: relative;
   z-index: 2;
@@ -179,27 +188,27 @@ header .row:after{
   transition: flex 0.5s;
   will-change: transform;
 
-  .item{
-    
+  .item {
+
     position: relative;
 
-    .item__close{
+    .item__close {
       display: none;
     }
 
-    .text__rename:hover{
+    .text__rename:hover {
       cursor: pointer;
       background-color: rgba(255, 187, 0, 0.31);
     }
 
-    &__header{
+    &__header {
       user-select: none;
       position: absolute;
       right: 10px;
       top: 5px;
 
-      &-btn{
-        display: inline-flex;
+      &-btn {
+        display: flex;
         justify-content: center;
         align-items: center;
         width: 3.2rem;
@@ -207,59 +216,61 @@ header .row:after{
         padding: 5px;
         font-size: 2rem;
         color: $color_text;
+        background-color: transparent;
         opacity: 0.5;
         user-select: none;
         border-radius: 50%;
         transition: all 0.15s ease-in;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
           opacity: 1;
         }
 
-        &:active{
+        &:active {
           background-color: $color_dark-shadow;
         }
 
-        &:first-child{
+        &:first-child {
           margin-right: 3px;
         }
       }
-      
+
 
     }
-    
 
-    &__title{
+
+    &__title {
       padding: 0 15px 10px 0;
       margin: 25px 0 15px 0;
       border-bottom: 2px solid $color_dark;
       border-radius: 10px 10px 0 0;
 
     }
-    &__list{
-      li{
-        background-color: $color_bg;
+
+    &__list {
+      li {
+        background-color: rgba(0, 0, 0, 0.08);
         opacity: 0.7;
         border-radius: 10px;
         transition: all 0.15s ease-in-out;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
           opacity: 1;
           // box-shadow: 0 0 7px rgba(77,77,77,0.1);
           box-shadow: 0 1px 5px 0 rgba(32, 33, 36, 0.3);
         }
       }
-      
+
     }
 
-    &__btn{
+    &__btn {
       margin: 20px 14px 0 0;
       display: flex;
       justify-content: flex-end;
 
-      &_style{
+      &_style {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -275,78 +286,91 @@ header .row:after{
 
         transition: all 0.15s ease-in, transform 0.1s ease-in, box-shadow 0.1s ease-in-out;
 
-        &:hover{
+        &:hover {
           box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
           opacity: 1;
         }
-        &:active{
+
+        &:active {
           transform: translateY(2px);
         }
       }
 
-      &_add{
+      &_add {
         background-color: $color_green;
-        &:hover{
+
+        &:hover {
           // background-color: $color_add-hover;
           background-color: darken($color_green, 7);
         }
-        &:active{
+
+        &:active {
           background-color: $color_green;
           box-shadow: 0 2px 1px 0 darken($color_green, 13);
         }
       }
-      &_delete{
+
+      &_delete {
         background-color: $color_red;
         letter-spacing: -6px;
 
-        & span::first-letter{
+        & span::first-letter {
           // color: blue;
           margin-left: -0.5rem;
         }
-        &:hover{
+
+        &:hover {
           background-color: darken($color_red, 7);
         }
-        &:active{
-           background-color: $color_red;
+
+        &:active {
+          background-color: $color_red;
           box-shadow: 0 2px 1px 0 darken($color_red, 13);
         }
-        &-active{
+
+        &-active {
           background-color: $color_yellow;
-          &:hover{
-          background-color: darken($color_yellow, 7);
+
+          &:hover {
+            background-color: darken($color_yellow, 7);
           }
-          &:active{
+
+          &:active {
             background-color: $color_yellow;
             box-shadow: 0 2px 1px 0 darken($color_yellow, 13);
-          
+
           }
         }
       }
 
-      &_rename{
-        
+      &_rename {
+
         //  justify-self: start;
-        margin-right: auto;
-         background: url('../img/icons/rename.svg') center/40% no-repeat;
-         background-color: $color_blue;
-        &:hover{
+        // margin-right: auto;
+        background: url('../img/icons/rename.svg') center/40% no-repeat;
+        background-color: $color_blue;
+
+        &:hover {
           // background-color: $color_add-hover;
           background-color: darken($color_blue, 7);
         }
-        &:active{
+
+        &:active {
           background-color: $color_blue;
           box-shadow: 0 2px 1px 0 darken($color_blue, 13);
         }
 
-        &-active{
+        &-active {
           background-color: $color_yellow;
-          &:hover{
-          background-color: darken($color_yellow, 7);
+
+          &:hover {
+            background-color: darken($color_yellow, 7);
           }
-          &:active{
+
+          &:active {
             background-color: $color_yellow;
             box-shadow: 0 2px 1px 0 darken($color_yellow, 13);
-          
+
           }
         }
 
@@ -357,33 +381,34 @@ header .row:after{
 }
 
 
-.item{
+.item {
   width: 100%;
   background-color: $color_item;
   padding: 17px 20px;
   border-radius: 17px;
+  border: 1px solid #eee;
   // box-shadow: 0 7px 20px $color_dark-shadow, 0 7px 9px $color_dark-shadow;
   // box-shadow: 0 10px 20px lighten($color_dark-shadow-2, 20), 0 7px 8px lighten($color_dark-shadow-2, 20);
   box-shadow: 0 1px 8px 0 rgba(32, 33, 36, 0.28);
-  transition: box-shadow 0.2s ease-in; 
+  transition: box-shadow 0.2s ease-in;
 
-  &:hover{
+  &:hover {
     box-shadow: 0 2px 12px 0px rgba(32, 33, 36, 0.4);
   }
 
 }
 
-.item textarea{
+.item textarea {
   width: 100%;
   background-color: transparent;
   resize: none;
   overflow: hidden;
   max-height: 4rem;
-  
+
 }
 
-.title{
-  h3{
+.title {
+  h3 {
     padding: 10px 5px 5px 5px;
     border-radius: 10px 10px 10px 10px;
     font-size: 2.5rem;
@@ -392,11 +417,12 @@ header .row:after{
     word-wrap: break-word;
     user-select: none;
 
-    &::first-letter{
+    &::first-letter {
       text-transform: capitalize;
     }
   }
-  &__input{
+
+  &__input {
     border-radius: 10px 10px 0 0;
     height: 2.5rem * 1.2;
     font-size: 2.5rem;
@@ -405,14 +431,16 @@ header .row:after{
     background-color: transparent;
     margin-top: -(2.5rem * 1.3 - 2.5rem);
     transform: translateY((2.5rem * 1.3 - 2.5rem));
-    
+
   }
 }
-.list{
-  ol{
+
+.list {
+  ol {
     margin: 5px 15px 5px 30px;
   }
-  li{
+
+  li {
     word-wrap: break-word;
     font-size: 1.8rem;
     padding: 6px 7px 6px 7px;
@@ -421,16 +449,16 @@ header .row:after{
     min-height: 1.8rem * 1.25;
     will-change: margin;
 
-    &::first-letter{
+    &::first-letter {
       text-transform: capitalize;
     }
   }
 
 
 
-  
 
-  li.list__complete{
+
+  li.list__complete {
     position: relative;
     user-select: none;
     cursor: pointer;
@@ -443,13 +471,14 @@ header .row:after{
     //   // list-style-type: none;
 
     // }
-    &:hover:before{
+    &:hover:before {
       content: '';
       visibility: hidden;
       box-sizing: content-box;
       position: absolute;
       display: inline-block;
       left: -3.5rem;
+      // left: -1.5rem;
       top: 0.4rem;
       width: 2.8rem;
       height: 100%;
@@ -460,15 +489,15 @@ header .row:after{
     }
 
 
-    
+
   }
 
-    li.li__complete{
+  li.li__complete {
     text-decoration: line-through;
     list-style-type: none;
     background-color: rgba(0, 226, 0, 0.4);
 
-    &:before{
+    &:before {
       content: '';
       box-sizing: content-box;
       position: absolute;
@@ -482,6 +511,7 @@ header .row:after{
       background-size: 55% auto;
       background-position: 50% top;
     }
+
     // &:before:hover{
     //   list-style: none;
     // }
@@ -490,18 +520,19 @@ header .row:after{
     // }
   }
 
-  li.list__delete{
+  li.list__delete {
     position: relative;
     user-select: none;
     cursor: pointer;
     background-color: rgba(226, 15, 15, 0.2);
     transition: all 0.15s ease-in-out;
 
-    &:hover{
+    &:hover {
       background-color: rgba(226, 0, 0, 0.3);
       list-style-type: none;
     }
-    &:hover:before{
+
+    &:hover:before {
       content: '';
       position: absolute;
       display: inline-block;
@@ -519,7 +550,7 @@ header .row:after{
   }
 
 
-  &__input{
+  &__input {
     margin: 0;
     padding: 0px !important;
     font-size: 1.8rem;
@@ -533,13 +564,13 @@ header .row:after{
 }
 
 
-.profile{
-   position: fixed;
-   right: -31rem;
-   top: 8rem;
-   z-index: 11;
-  
-  &__header{
+.profile {
+  position: fixed;
+  right: -31rem;
+  top: 8rem;
+  z-index: 11;
+
+  &__header {
     position: relative;
     z-index: 20;
     visibility: hidden;
@@ -560,9 +591,10 @@ header .row:after{
     background-color: $color_bg-2;
     // box-shadow: 0 6px 15px rgba(0,0,0,0.25), 0 3px 9px rgba(0,0,0,0.35);
 
-    
+
   }
-  &__text{
+
+  &__text {
     display: flex;
     align-items: center;
     box-shadow: content-box;
@@ -573,30 +605,34 @@ header .row:after{
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.5s;
-    &:hover{
+
+    &:hover {
       background-color: darken($color_bg-2, 7);
       color: darken($color_text, 50);
       // text-decoration: underline;
     }
   }
-  
 
-  &__login{
+
+  &__login {
     font-size: 1.5rem;
   }
-  &__email{
+
+  &__email {
     font-size: 1.2rem;
   }
 
-  #logout{
+  #logout {
     display: inline-block;
-    button{
+
+    button {
       background-color: transparent;
       color: $color_red;
       margin: 0.2rem 0.2rem;
       padding: 0.2rem 0.2rem;
       transition: all 0.25s;
-      &:hover{
+
+      &:hover {
         color: darken($color_red, 17);
         text-decoration: underline;
       }
@@ -604,7 +640,7 @@ header .row:after{
   }
 }
 
-.cards__title{
+.cards__title {
   user-select: none;
   position: absolute;
   padding: 2rem 1rem;
@@ -615,20 +651,21 @@ header .row:after{
   width: 100%;
   height: 55vh;
 
-  p{
+  p {
     margin-bottom: 1rem;
     text-align: center;
-    color: rgba(55,55,55,0.5);
+    color: rgba(55, 55, 55, 0.5);
     font-size: 2.5rem;
     font-weight: bold;
   }
-  p:first-child{
+
+  p:first-child {
     margin-bottom: 3rem;
   }
 
 }
 
-.popup{
+.popup {
   display: none;
   overflow-x: hidden;
   position: absolute;
@@ -637,11 +674,11 @@ header .row:after{
   min-width: 100vw;
   min-height: 100vh;
   z-index: 100;
-  background-color: rgba(0,0,0,0.55);
+  background-color: rgba(0, 0, 0, 0.55);
   opacity: 0;
   transition: all 0.2s ease-in-out;
 
-  &__status{
+  &__status {
     position: absolute;
     left: 50%;
     bottom: -3.95rem;
@@ -651,12 +688,12 @@ header .row:after{
     // border: 2px solid red;
     font-size: 1.5rem;
     background-color: $color_red;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     color: $color_text;
     transform: translateX(-50%);
   }
 
-  &__close{
+  &__close {
     user-select: none;
     cursor: pointer;
     font-size: 2rem;
@@ -665,7 +702,7 @@ header .row:after{
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
 
@@ -673,7 +710,7 @@ header .row:after{
   }
 
 
-  &__block{
+  &__block {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -685,10 +722,10 @@ header .row:after{
     z-index: 11;
     transform: translate(-50%, -50%);
     border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3), 0 7px 17px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3), 0 7px 17px rgba(0, 0, 0, 0.2);
   }
 
-  &__form{
+  &__form {
     max-width: 35rem;
     min-width: 25rem;
     font-size: 1.5rem;
@@ -698,7 +735,7 @@ header .row:after{
     align-items: center;
   }
 
-  label{
+  label {
     user-select: none;
     cursor: pointer;
     display: block;
@@ -707,19 +744,21 @@ header .row:after{
     margin: 2rem 0 0.5rem 0;
     text-align: left;
     transition: all 0.15s ease-in-out;
-    &:last-child{
+
+    &:last-child {
       margin-top: 0;
     }
   }
 
-  input+input{
+  input+input {
     margin-bottom: 0.5rem;
   }
-  input[type="email"]{
+
+  input[type="email"] {
     background-image: none !important;
   }
 
-  input{
+  input {
     display: flex;
     min-width: 20rem;
     max-width: 29rem;
@@ -734,26 +773,35 @@ header .row:after{
     transition: all 0.15s ease-in-out;
 
   }
-  input {outline: none;}
+
+  input {
+    outline: none;
+  }
+
   input:focus {
     outline: none;
     border-color: $color_blue;
   }
-  input:focus + label{
+
+  input:focus+label {
     color: $color_blue;
   }
 
   input:autofill {
-    box-shadow: inset 0 0 0 50px #f9f9f9 !important; /* Цвет фона */
-    text-fill-color: $color_text !important; /* цвет текста */
-    color: $color_text !important; /* цвет текста */
+    box-shadow: inset 0 0 0 50px #f9f9f9 !important;
+    /* Цвет фона */
+    text-fill-color: $color_text !important;
+    /* цвет текста */
+    color: $color_text !important;
+    /* цвет текста */
   }
+
   // input:-webkit-autofill {
   //   -webkit-box-shadow: inset 0 0 0 50px #f9f9f9 !important; /* Цвет фона */
   //   -webkit-text-fill-color: $color_text !important; /* цвет текста */
   //   color: $color_text !important; /* цвет текста */
   // }
-  button{
+  button {
     display: block;
     width: 20rem;
     margin: 3rem 0 1rem 0;
@@ -767,29 +815,33 @@ header .row:after{
     transition: all 0.15s ease-in, transform 0.1s ease-in, box-shadow 0.1s ease-in-out;
 
 
-    &:hover{
-       background-color: darken($color_blue, 7);
-       box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
+    &:hover {
+      background-color: darken($color_blue, 7);
+      box-shadow: 0 2px 8px 0 rgba(32, 33, 36, 0.45);
 
     }
-    &:active{
+
+    &:active {
       box-shadow: 0 2px 1px 0 darken($color_blue, 13),
-                  0 2px 8px 0 rgba(32, 33, 36, 0.45);
+        0 2px 8px 0 rgba(32, 33, 36, 0.45);
       transform: translateY(2px);
     }
 
   }
-  
-  &__subtitle{
+
+  &__subtitle {
     margin-top: 1rem;
-    p{
+
+    p {
       font-size: 1.4rem;
       color: $color_text;
     }
-    a{
+
+    a {
       color: $color_blue;
       transition: all 0.15s ease-in-out;
-      &:hover{
+
+      &:hover {
         color: darken($color_blue, 15);
         text-decoration: underline;
       }
@@ -798,91 +850,120 @@ header .row:after{
 }
 
 
+.date-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-@keyframes close{
-  from{
+  margin: 0 auto;
+
+  span {
+    color: $color_text;
+    opacity: 0.7;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+
+@keyframes close {
+  from {
     opacity: 1;
   }
-  30%{
+
+  30% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     transform: translateX(-38rem) translateY(-38rem);
-    
+
     opacity: 0;
   }
 }
 
 @keyframes block_fadeIn {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(10rem);
   }
-  70%{
+
+  70% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     transform: translateY(0rem);
   }
 }
 
 @keyframes list_fadeIn {
-  0%{
+  0% {
     opacity: 0;
     // transform: translate3d(0px, -3rem, 0px);
     margin-top: -3.5rem;
   }
-  80%{
+
+  80% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     // transform: translate3d(0px, 0rem, 0px);
-     margin-top: 0rem;
+    margin-top: 0rem;
   }
 }
+
 @keyframes list_fadeOut {
-  0%{
+  0% {
     opacity: 1;
     // transform: translate3d(0px, -3rem, 0px);
     margin-top: 0rem;
   }
-  80%{
+
+  80% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 0;
     // transform: translate3d(0px, 0rem, 0px);
-     margin-top: -3.5rem;
+    margin-top: -3.5rem;
   }
 }
 
 @keyframes open_profile {
-  0%{
+  0% {
     opacity: 0;
-    transform: scale(0,0);
+    transform: scale(0, 0);
   }
 
-  40%{
+  40% {
     opacity: 1;
-    transform: scale(0.05,1);
+    transform: scale(0.05, 1);
   }
-  50%{
-    transform: scale(0.07,1);
+
+  50% {
+    transform: scale(0.07, 1);
   }
+
   // 85%{
   //   transform: scale3d(1,1,1);
   // }
-  85%{
-    transform: scale(1.05,1);
+  85% {
+    transform: scale(1.05, 1);
   }
-  100%{
-    transform: scale(1,1);
+
+  100% {
+    transform: scale(1, 1);
     animation-play-state: paused;
     opacity: 1;
   }
 }
 
-.open__profile-a{
+.open__profile-a {
   visibility: hidden;
   will-change: transform;
   animation-play-state: paused;
@@ -892,7 +973,8 @@ header .row:after{
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-.open__profile{
+
+.open__profile {
   visibility: visible;
   transform: translateX(-32rem) scale(1);
   opacity: 1;
@@ -900,34 +982,35 @@ header .row:after{
 
 }
 
-.list .list_fadeIn{
+.list .list_fadeIn {
 
   animation-name: list_fadeIn;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
 }
-.list .list_fadeOut{
+
+.list .list_fadeOut {
   opacity: 0;
   animation-name: list_fadeOut;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
 }
 
-.block_fadeIn{
+.block_fadeIn {
   animation-name: block_fadeIn;
   animation-duration: 0.45s;
   animation-timing-function: ease-in-out;
 
 }
 
-.closeAnim{
+.closeAnim {
   opacity: 0;
   animation-name: close;
   animation-timing-function: ease-in-out;
 
 }
 
-.popup_visible{
+.popup_visible {
   display: block;
   opacity: 1;
   transition: all 0.2s ease-in-out;
@@ -937,153 +1020,175 @@ header .row:after{
 
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-    width: 15px; /* ширина для вертикального скролла */
-    height: 8px; /* высота для горизонтального скролла */
-    background-color: $color_bg;
+  width: 15px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: $color_bg;
 }
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-    background-color: $color_dark;
-    border-radius: 8rem;
-    // box-shadow:  0px 7px 17px 5px darken($color_text, 5);
+  background-color: $color_dark;
+  border-radius: 8rem;
+  // box-shadow:  0px 7px 17px 5px darken($color_text, 5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($color_dark, 10);
+  background-color: darken($color_dark, 10);
 }
 
 /* Стрелки */
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
   display: none;
-    // background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    // linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    // linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: darken($color_dark, 30);
+  // background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  // linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  // linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: darken($color_dark, 30);
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
   display: none;
-    // background:
-    //     linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    //     linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    //     linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: darken($color_dark, 30);
+  // background:
+  //     linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  //     linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  //     linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: darken($color_dark, 30);
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
   display: none;
-    // background:
-    //     linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    //     linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    //     linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: darken($color_dark, 30);
+  // background:
+  //     linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  //     linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  //     linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: darken($color_dark, 30);
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
   display: none;
-    // background:
-    //     linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    //     linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-    //     linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-    background-color: darken($color_dark, 30);
+  // background:
+  //     linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  //     linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+  //     linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: darken($color_dark, 30);
 }
 
-html, body {
-    
-    scrollbar-color: $color_bg $color_dark;   /* «цвет ползунка» «цвет полосы скроллбара» */
-    scrollbar-width: auto;  //| thin | none;  /* толщина */
+html,
+body {
+
+  scrollbar-color: $color_bg $color_dark;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: auto; //| thin | none;  /* толщина */
 }
 
-*{
+* {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@media (min-width: 1100px){
-  html{
+@media (min-width: 1100px) {
+  html {
     font-size: 10px;
   }
-  .block{
+
+  .block {
     width: 33.3333%;
     flex: 0 0 33.3333%;
   }
-  main .row{
+
+  main .row {
     margin: 0 auto;
   }
 }
 
-@media (max-width: 1100px){
-  html{
+@media (max-width: 1100px) {
+  html {
     font-size: 14px;
   }
-  .block{
+
+  .block {
     width: 50%;
     flex: 0 0 50%;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 8.9rem;
     }
   }
-  main .row{
+
+  main .row {
     margin: 0 auto;
   }
 }
 
-@media (max-width: 1024px){
-  element:hover, element:active {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none /*only to disable context menu on long press*/
-}
+@media (max-width: 1024px) {
+
+  element:hover,
+  element:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -webkit-touch-callout: none
+      /*only to disable context menu on long press*/
+  }
 }
 
-@media (max-width: 840px){
-  body{
+@media (max-width: 840px) {
+  body {
     padding-right: 0px;
   }
-  html{
+
+  html {
     font-size: 12px;
   }
-  main .row{
+
+  main .row {
     justify-content: center;
   }
-  .block{
-    
+
+  .block {
+
     flex: 0 0 85%;
-    &:last-child{
-      margin-bottom: 4.7rem;
+
+    &:last-child {
+      margin-bottom: 4.9rem;
     }
   }
 }
 
-@media (max-width: 550px){
-  header{
+@media (max-width: 550px) {
+  header {
     padding-top: 0.5rem;
   }
-  html{
+
+  html {
     font-size: 10px;
   }
-  .logo{
+
+  .logo {
     margin-left: 1rem;
-    &__span{
+
+    &__span {
       font-size: 2.5rem;
-      
+
     }
   }
-  main{
+
+  main {
     padding-top: 8rem;
     padding-right: 0rem;
   }
-  main .row{
+
+  main .row {
     justify-content: center;
   }
-  .block{
+
+  .block {
     flex: 0 0 97%;
     padding: 10px 15px;
   }
 
-  .profile{
-    &__header{
+  .profile {
+    &__header {
       width: 25rem;
     }
   }

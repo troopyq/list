@@ -42,6 +42,7 @@
 
 		echo json_encode($response);
 
+		exit();
 		
 
 	} else {
@@ -53,6 +54,7 @@
 
 		echo json_encode($response);
 
+		exit();
 	}
  ?>
 

@@ -1,6 +1,6 @@
 <?php 
   session_start();
-  $upd = 12;
+  $upd = 15;
 
   require ('./vendor/autoSignin.php');
 
@@ -14,9 +14,9 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width,
                                     initial-scale=1,
-                                     maximum-scale=1,
-                                      user-scalable=0,
-                                       shrink-to-fit=no">
+                                    maximum-scale=1,
+                                    user-scalable=0,
+                                    shrink-to-fit=no">
   <title>To Do List</title>
   <link rel="stylesheet" href="css/style.css?v=<?= $upd?>">
 </head>
@@ -33,8 +33,7 @@
     <button class="profile__text isButton" type="submit">Выход</button>
     </form>
   </div>
-</div>
-
+</div> 
  <?php endif; ?>
 
 
@@ -44,7 +43,7 @@
         <div class="logo"><span class="logo__span">To Do List</span></div>
 
  
-        
+        <!-- <span style="color: red; font-size: 3rem;"><?= $_COOKIE['user']?></span> -->
 
         <?php if ($_COOKIE['user'] == ''): ?>
         <button class="login header__btn-log isButton">Войти</button>
@@ -64,88 +63,7 @@
     <div class="container">
       <div id="cards" class="row row-cards">
 
-          <?php if ($_SESSION['user']['id']){
-            require_once './vendor/connect.php';
-            require './vendor/getData.php';
-            
-            foreach ($data2 as $key => $value) {
-              // if ($value['title'] !== '' && $value[0]['text'] !== ''):
-
-          ?>
-
-        <div class="block block_fadeIn" style="order: <?= $value['id']?>;">
-          <div class="block__item item">
-            <div class="item__title title">
-              <h3 class="title__text item__text">
-                <?php if (trim($value['title']) === ''){ ?>
-                <textarea class="title__input" placeholder="Название списка" maxlength="90"></textarea>
-                <?php } else{
-                  echo trim($value['title']);
-            }
-                ?>
-                
-              </h3>
-              <div class="item__header">
-                <span class="item__close item__header-btn">&amp;#8212;</span>
-                <span class="item__delete item__header-btn">✖</span>
-              </div>
-            </div>
-            <div class="item__list list">
-              <ol class="list__ol">
-              <?php   foreach ($value['list'] as $key => $value) {
-                 # code...
-                 if ($value['complete']):
-                ?>
-
-                <li class="item__text li__text list__complete li__complete">
-
-                  <?php if (trim($value['text']) === ''){ ?>
-                <textarea class="list__input" placeholder="Название дела" maxlength="90"></textarea>
-                <?php } else{
-                  echo trim($value['text']);
-                   }   
-                ?>
-                </li>
-
-                 <?php else:  ?>
-
-                <li class="item__text li__text list__complete">
-                  <?php if (trim($value['text']) === ''){ ?>
-                <textarea class="list__input" placeholder="Название дела" maxlength="90"></textarea>
-                <?php } else{
-                  echo trim($value['text']);
-                   }   
-                ?>
-                </li>
-
-                <?php
-                  endif;
-                
-                }
-                ?>
-              </ol>
-            </div>
-            <div class="item__btn">
-              <button class="item__btn_rename item__btn_style"></button>
-              <button class="item__btn_delete item__btn_style"><span>--</span></button>
-              <button class="item__btn_add item__btn_style"><span>+</span></button>
-            </div>
-          </div>
-        </div>
-        <?php
-            // endif;
-          }
-        } else{
-         ?>
-
-          <div class="cards__title">
-            <p>Авторизируйтесь, чтобы записи сохранились</p>
-            <p>Чтобы создать новый список, нажмите на "+" сверху</p>
-          </div>
-
-
-        <?php }  ?>
-
+          
 
 
       </div>

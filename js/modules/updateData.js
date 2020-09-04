@@ -79,7 +79,7 @@ function updateData ()  {
         
       })
       .catch(() => {
-      
+        
       })
       .finally(() => {
        
