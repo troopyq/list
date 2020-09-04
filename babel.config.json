@@ -4,9 +4,9 @@
       "@babel/env",
       {
         "targets": {
-          "edge": "17",
-          "firefox": "50",
-          "chrome": "52",
+          "edge": "14",
+          "firefox": "55",
+          "chrome": "55",
           "safari": "11.1",
         },
         "useBuiltIns": "usage",

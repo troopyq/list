@@ -1,6 +1,6 @@
 <?php 
   session_start();
-  $upd = 15;
+  $upd = 16;
 
   require ('./vendor/autoSignin.php');
 
@@ -18,7 +18,8 @@
                                     user-scalable=0,
                                     shrink-to-fit=no">
   <title>To Do List</title>
-  <link rel="stylesheet" href="css/style.css?v=<?= $upd?>">
+  <!-- <link rel="stylesheet" href="css/style.css?v=<?= $upd?>"> -->
+  <link rel="stylesheet" href="css/style.min.css?v=<?= $upd?>">
 </head>
 <body>
 
@@ -107,7 +108,8 @@
     </div>
   </div>
   
-  <script src="js/main.js?v=<?= $upd?>"></script>
+  <!-- <script src="js/main.js?v=<?= $upd?>"></script> -->
+  <script src="index_es5.js?v=<?= $upd?>"></script>
 
 </body>
 </html>
