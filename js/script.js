@@ -1,48 +1,51 @@
-// import closeCard from '../js/modules/closeCard.js';
-// import addCard from '../js/modules/addCard.js';
-// import inputChange from '../js/modules/inputChange.js';
-// import addList from '../js/modules/addList.js';
-// import removeList from '../js/modules/removeList.js';
-// import renameList from '../js/modules/renameList.js';
-// // import scrollTo from '../js/modules/scrollToInput.js'
-// import completeList from '../js/modules/completeList.js';
-// import validation from './modules/validation.js';
-// import modals from './modules/modals.js';
-// import openProfile from './modules/openProfile.js';
-// import updateData from './modules/updateData.js';
+'use strict';
 
+import updateData from './modules/updateData'; //
+import inputChange from './modules/inputChange'; //
+import addDateCard from './modules/addDateCard'; //
+import calcScroll from './modules/calcScroll'; //
+import Card from './modules/Card'; //
+import difference from './modules/difference'; //
+import closeCard from './modules/closeCard'; //
+import addCard from './modules/addCard'; //
+import addList from './modules/addList'; //
+import removeList from './modules/removeList'; //
+import renameList from './modules/renameList'; //
+import scrollTo from './modules/scrollToInput'; //
+import completeList from './modules/completeList'; //
+import validation from './modules/validation'; //
+import modals from './modules/modals'; //
+import openProfile from './modules/openProfile'; //
+import renderCardsForData from './modules/renderCardsForData'; //
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.addEventListener('click', (e) => {
+    closeCard(e, '.item__delete', 0.5, 0.75);
+  });
 
-  document.body.addEventListener('click', e => {
-    closeCard(e, '.item__delete', 0.5, 0.75)
-  })
+  
 
+  addCard('.btn__add-card');
 
-  addCard('.btn__add-card','.row-cards')
+  inputChange();
 
-  inputChange()
+  addList();
 
-  addList()
+  removeList();
 
-  removeList()
+  renameList();
 
-  renameList()
+  completeList();
 
-  completeList()
+  validation();
 
-  validation()
+  modals();
 
-  modals()
+  openProfile('.profile-btn .header__btn-log', '.profile__header');
 
-  openProfile('.profile-btn .header__btn-log', '.profile__header')
+  renderCardsForData();
 
   let updateDataInterval = setInterval(() => {
-
-    updateData()
-
-    
+    updateData();
   }, 1000 * 30 * 1);
-
-
-})
+});

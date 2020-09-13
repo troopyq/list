@@ -1,6 +1,6 @@
 <?php 
   session_start();
-  $upd = 18;
+  $upd = 19;
 
   require ('./vendor/autoSignin.php');
 
@@ -110,7 +110,7 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019%2Ces5%2Ces6%2Ces7%2Cwindow.scroll%2Cwindow.scrollBy%2C%7Ehtml5-elements%2CrequestIdleCallback%2CpageYOffset%2CpageXOffset%2CglobalThis%2Cfetch%2CgetComputedStyle%2ClocalStorage%2CinnerWidth%2CinnerHeight%2CdevicePixelRatio%2Cconsole.log%2Cconsole.dir%2CXMLHttpRequest%2CWindow%2CPromise%2CPromise.prototype.finally%2CNumber.parseInt%2CNumber.parseFloat%2CNodeList.prototype.forEach%2CNode.prototype.contains%2CJSON%2CMap%2CHTMLDocument%2CFunction.prototype.bind%2CFunction.prototype.name%2CEvent%2CEvent.focusin%2CEvent.hashchange%2CElement.prototype.scrollIntoView%2CElement.prototype.scrollBy%2CElement.prototype.scroll%2CElement.prototype.remove%2CElement.prototype.placeholder%2CElement.prototype.matches%2CElement.prototype.closest%2CElement.prototype.classList%2CElement.prototype.append%2CElement%2CDocumentFragment.prototype.append%2CDocumentFragment%2CDocument%2CDate.now%2CCSS.supports%2CArray.prototype.reduce%2CArray.prototype.map%2CArray.prototype.indexOf%2CArray.prototype.includes%2CArray.prototype.forEach%2CArray.of%2Cdefault"></script>
   <!-- <script src="js/main.js?v=<?= $upd?>"></script> -->
-  <script src="index_es5.js?v=<?= $upd?>"></script>
+  <script src="./js/bundle.js?v=<?= $upd?>"></script>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
-function scrollToInput(item, where = 'start', inline = 'nearest')  {
+function scrollToInput(item, where = 'start', inline = 'nearest') {
   item.scrollIntoView({
     behavior: 'smooth',
     block: where,
-    inline: inline
-  })
+    inline: inline,
+  });
 }
 
-// export default scrollToInput
+export default scrollToInput
